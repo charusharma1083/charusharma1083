@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "a0a1aec7-c9ab-4e3e-87ea-fc8ca1413b89",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "display All Reviews",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProductReviewSystem/review-module/displayAllReviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProductReviewSystem",
+						"review-module",
+						"displayAllReviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reviewId\":2,\r\n\"reviewName\":\"second Reveiw\",\r\n\"rating\":4,\r\n\"comments\":\"very good\",\r\n\"userId\":1002,\r\n\"prodId\":2,\r\n\"reviewDate\":\"2021-07-08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProductReviewSystem/review-module/addReview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProductReviewSystem",
+						"review-module",
+						"addReview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Review",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reviewId\":1,\r\n\"reviewName\":\"first Reveiw\",\r\n\"rating\":5,\r\n\"comments\":\"excellent\",\r\n\"userId\":1002,\r\n\"prodId\":2,\r\n\"reviewDate\":\"2021-07-08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProductReviewSystem/review-module/updateReview/{1}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProductReviewSystem",
+						"review-module",
+						"updateReview",
+						"{1}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete review",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ProductReviewSystem/review-module/deleteReview/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ProductReviewSystem",
+						"review-module",
+						"deleteReview",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
