@@ -1,0 +1,29 @@
+<button [routerLink]="['/addReview']" class="btn btn-info"> Add Review</button>
+<div class="col-md-12">  
+  <h2> Review Details</h2>  
+  <div class="table-responsive table-container">  
+    <table class="table">  
+      <thead>  
+        <tr>  
+          <th>Product Name</th>  
+          <th>Review Comments</th>  
+          <th>Rating</th>  
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let r of reviews">  
+          <td class="hidden">{{r.reviewId}}</td>  
+          <td class="hidden">{{r.reviewName}}</td>  
+          <td class="hidden">{{r.userId}}</td>  
+          <td class="hidden">{{r.prodId}}</td>  
+          <td>{{r.comments}}</td>  
+          <td>{{r.rating}}</td>  
+          <td>  
+            <button (click)="deleteReview(r)" class="btn btn-info"> Delete</button>  
+            <button (click)="editReview(r)" style="margin-left: 20px;" class="btn btn-info"> Edit</button>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
+</div>  
